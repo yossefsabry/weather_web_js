@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weather App || yossef</title>
@@ -9,57 +9,61 @@
     <link rel="stylesheet" href="css/normailze.css">
     <!-- boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-</head>
+  </head>
 
 <body>
 
     <header>
-        <div class="container">
-            <img src="images//ian-dooley-DuBNA1QMpPA-unsplash.jpg" alt="background">
-            <div class="logo">
-                the weather
-            </div>
-            <i class='bx bx-menu' id="menu_bar"></i>
-            <div class="info">
-                <div class="search">
-                    <input type="text" placeholder="Another Location" id="input_city">
-                    <i class='bx bx-search' id="submit"></i>
-                </div>
-                <div class="last_city">
-                    <ul>
-                        <li>Berlin</li>
-                        <li>new york</li>
-                        <li>moscow</li>
-                        <li>Beijing</li>
-                    </ul>
-                </div>
-                <div class="weather_details">
-                    <h2>Weather Details</h2>
-                    <ul>
-                        <li><span>Country</span> <span id="country"></span></li>
-                        <li><span>Humidity</span> <span id="humidity"></span></li>
-                        <li><span>Wind Speed</span> <span id="wind_speed"></span></li>
-                        <li><span>Timezone</span> <span id="timezone"></span></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <img src="images/ian-dooley-DuBNA1QMpPA-unsplash.jpg" alt="background">
+        <div class="logo">
+          the weather
         </div>
+        <i class='bx bx-menu' id="menu_bar"></i>
+        <div class="info">
+          <div class="search">
+            <input type="text" placeholder="Another Location" id="input_city">
+            <i class='bx bx-search' id="submit"></i>
+          </div>
+          <div class="last_city">
+            <ul>
+              <li>Berlin</li>
+              <li>new york</li>
+              <li>moscow</li>
+              <li>Beijing</li>
+            </ul>
+          </div>
+          <div class="weather_details">
+            <h2>Weather Details</h2>
+            <ul>
+              <li><span>Country</span> <span id="country"></span></li>
+              <li><span>Humidity</span> <span id="humidity"></span></li>
+              <li><span>Wind Speed</span> <span id="wind_speed"></span></li>
+              <li><span>Timezone</span> <span id="timezone"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
 
     <div class="hero">
-        <div class="container">
-            <h1 id="temp"></h1>
-            <div class="name">
-                <h1></h1>
-                <div class="time">
-                </div>
-            </div>
-            <div class="weather">
-                <i class='bx bx-sun'></i>
-                <span></span>
-            </div>
+      <div class="container">
+        <h1 id="temp"></h1>
+        <div class="name">
+          <h1></h1>
+          <div class="time">
+          </div>
         </div>
+        <div class="weather">
+          <div>
+            <span></span>
+            <i class='bx bx-sun'></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container__spinner">
+      <div class="spinner"></div>
     </div>
 
     <script src="js/script.js"></script>
