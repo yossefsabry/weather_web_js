@@ -18,19 +18,18 @@ function checkWeather() { // lsp suggest convert ot async func
       loaderSpinner(false);
       reject(`error happend: ${e}`);
     }
-  }, (e) => console.log(e))
-
+  })
     .then((response) => {
       return new Promise((reslove, reject) => {
         try {
           const data = response.json();
-          console.log(data);
           reslove(data);
         } catch (e) {
           loaderSpinner(false);
+          console.log(e);
           reject(e);
         }
-      }, (e) => console.log(e))
+      })
         // Add the fade-in class to the target elements
         .then((data) => {
           const tempElement = document.getElementById("temp");
@@ -42,7 +41,7 @@ function checkWeather() { // lsp suggest convert ot async func
           nameElement.classList.add("fade-in");
 
           const weatherElement = document.querySelector(".weather span");
-          weatherElement.textContent = data.weather[0].description;
+          weatherElement.textContent = data?.weather[0]?.description;
           weatherElement.classList.add("fade-in");
 
           const countryElement = document.getElementById("country");
@@ -62,7 +61,13 @@ function checkWeather() { // lsp suggest convert ot async func
           timezoneElement.classList.add("fade-in");
           changeBackgroundImage(data.main.temp);
           loaderSpinner(false);
+        }).catch((err) => {
+          console.log(err);
+          loaderSpinner(false);
         });
+    }).catch((err) => {
+      console.log(err);
+      loaderSpinner(false);
     });
 };
 checkWeather();
@@ -108,10 +113,10 @@ setInterval(displayDateTime, 1000);
 
 
 // show menu
+const menuBars = document.getElementById("menu_bar");
+const menu = document.querySelector("header .container .info");
+let menuOption = "hidden";
 menuBars.onclick = () => {
-  const menuBars = document.getElementById("menu_bar");
-  const menu = document.querySelector("header .container .info");
-  let menuOption = "hidden";
   if (menuOption == "hidden") {
     menu.style.transform = 'translateX(0)';
     menuBars.style.position = "absolute";
