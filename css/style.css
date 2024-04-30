@@ -8,7 +8,7 @@
 }
 
  html {
-   font-size: 14px;
+   font-size: 15px;
  }
 
 body {
@@ -207,8 +207,8 @@ header .container .info .search i:hover {
   position: absolute;
   align-items: start;
   justify-content: center;
-  bottom: 7rem;
-  padding: 2rem 4rem;
+  bottom: 8rem;
+  padding: 4rem 4rem;
   gap: 40px;
 }
 
@@ -222,7 +222,7 @@ header .container .info .search i:hover {
 
 @media (max-width: 1100px) {
   .hero .container {
-    bottom: 0;
+    bottom: 8rem;
     gap: 20px;
     row-gap: 50px;
   }
