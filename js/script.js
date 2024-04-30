@@ -180,8 +180,8 @@ function changeBackgroundImage(status) {
     value1.setAttribute('fill', '#bad2dc');
     value2.setAttribute('fill', '#acc163');
     value3.setAttribute('fill', '#aabef7');
-    value4.setAttribute('fill', '#cecece');
-    body.style.backgroundColor = "#e4e4e4";
+    value4.setAttribute('fill', '#6f527891');
+    body.style.backgroundColor = "#c9c3cb91";
     body.style.color = "black";
     return;
   };

@@ -39,6 +39,7 @@ header .container {
   gap: 10px;
   padding: 2rem 4rem;
   position: relative;
+  z-index: 3;
 }
 
  header .container .logo {
@@ -70,6 +71,7 @@ header .container .info {
   background-color: rgba(0, 0, 0, 0.288);
   transition: .4s ease;
   display: block;
+  z-index: 2;
 }
 
 @media (max-width: 700px) {
@@ -210,6 +212,7 @@ header .container .info .search i:hover {
   bottom: 8rem;
   padding: 4rem 4rem;
   gap: 40px;
+  z-index: 2;
 }
 
 @media (max-width: 700px) {
@@ -358,7 +361,7 @@ header .container .info .search i:hover {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 1;
 }
 
 svg {
