@@ -21,7 +21,7 @@
     "bugs": {
         "url": "https://github.com/yossefsabry/weather_web_js/issues"
     },
-    "homepage": "https://github.com/yossefsabry/weather_web_js",
+    "homepage": "https://github.com/yossefsabry/weather_web_js/public",
     "devDependencies": {
         "@babel/core": "^7.26.7",
         "@babel/preset-env": "^7.26.7",
