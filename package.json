@@ -1,36 +1,14 @@
 {
-    "name": "weather_web_js",
-    "version": "1.0.0",
-    "description": "weather web",
-    "type": "commonjs",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "node index.js",
-        "build": "webpack --config webpack.config.js",
-        "start": "webpack serve --config webpack.config.js",
-        "deploy": "gh-pages -d dist"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/yossefsabry/weather_web_js.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/yossefsabry/weather_web_js/issues"
-    },
-    "homepage": "https://github.com/yossefsabry/weather_web_js/public",
-    "devDependencies": {
-        "@babel/core": "^7.26.7",
-        "@babel/preset-env": "^7.26.7",
-        "babel-loader": "^9.2.1",
-        "dotenv": "^16.4.7",
-        "dotenv-webpack": "^8.1.0",
-        "gh-pages": "^6.3.0",
-        "webpack": "^5.97.1",
-        "webpack-cli": "^6.0.1",
-        "webpack-dev-server": "^5.2.0"
-    }
+  "name": "weather_app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.1.0"
+  }
 }

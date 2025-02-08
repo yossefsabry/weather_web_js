@@ -1,8 +1,10 @@
+
 // ----- global variables -----
 let city = 'Cairo'
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}`
 
-const apiKey = process.env.API_KEY; // `API_KEY` is your key in .env
+// const apiKey = process.env.API_KEY; // `API_KEY` is your key in .env
+const apiKey = import.meta.env.VITE_API_KEY;
 
 /**
  * Fetches weather data from an API and updates the UI with the retrieved data.
@@ -14,9 +16,7 @@ async function checkWeather() {
           loaderSpinner(true);
           try {
             const response = fetch(apiUrl + `&appid=${apiKey}`);
-            reslove(response);
-          } catch (e) {
-            loaderSpinner(false);
+            reslove(response); } catch (e) { loaderSpinner(false);
             reject(`error happend: ${e}`);
           }
         });
@@ -127,8 +127,7 @@ setInterval(displayDateTime, 1000);
 const menuBars = document.getElementById("menu_bar");
 const menu = document.querySelector("header .container .info");
 let menuOption = "hidden";
-menuBars.onclick = () => {
-    if (menuOption == "hidden") {
+menuBars.onclick = () => { if (menuOption == "hidden") {
         menu.style.transform = 'translateX(0)';
         menuBars.style.position = "absolute";
         menuBars.style.zIndex = 3;
