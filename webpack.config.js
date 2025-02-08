@@ -5,7 +5,7 @@ module.exports = {
     entry: './public/js/script.js', // Your entry JavaScript file (can be moved to src folder)
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'), // Bundle will go to dist folder
+        path: path.resolve(__dirname, './public/dist'), // Bundle will go to dist folder
         publicPath: '/dist/', // Important for webpack dev server to resolve the path for bundle.js
     },
     mode: 'development',
