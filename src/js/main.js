@@ -28,7 +28,7 @@ async function checkWeather() {
                     reslove_1(data);
                 } catch (e_1) {
                     loaderSpinner(false);
-                    console.log(e_1);
+                    // console.log(e_1);
                     reject_1(e_1);
                 }
             });
@@ -132,7 +132,7 @@ menuBars.onclick = () => { if (menuOption == "hidden") {
         menuBars.style.position = "absolute";
         menuBars.style.zIndex = 3;
         menuBars.style.top = "0";
-        menuBars.style.right = 'calc(48% + 1rem)';
+        menuBars.style.right = 'calc(40% + 1.5rem)';
         menuOption = "show";
         menuBars.style.color = "white";
         menuBars.classList.toggle("bx-x");
@@ -140,7 +140,8 @@ menuBars.onclick = () => { if (menuOption == "hidden") {
     } else {
         menu.style.transform = 'translateX(100%)';
         menuOption = "hidden";
-        menuBars.style.cssText = "position: relative; top: 0; right: 0; z - index: 3; ";
+        menuBars.style.cssText = "position: relative; bottom: 20rem; right: 0; z - index: 3; ";
+        menuBars.style.bottom = "20rem";
         menuBars.classList.toggle("bx-x");
         menuBars.classList.toggle("bx-menu");
     };
@@ -202,3 +203,25 @@ function changeBackgroundImage(status) {
     body.style.backgroundColor = "#0e0014";
     body.style.color = "white";
 }; changeBackgroundImage();
+
+
+document.addEventListener("click", function (event) {
+    // Ignore clicks inside elements with the 'hero' class
+    if (event.target.closest(".hero")) {
+        return; // Do nothing if the clicked element is inside .hero
+    }
+
+    // Check if the clicked element is NOT inside '.info' or '#menu_bar'
+    if (!event.target.closest(".info") && !event.target.closest("#menu_bar")) {
+        if (menuOption !== "hidden") {
+            menuOption = "hidden";
+            menu.style.transform = 'translateX(100%)';
+            menuBars.style.cssText = "position: relative; bottom: 20rem; right: 0; z-index: 3;";
+            menuBars.style.bottom = "20rem";
+            menuBars.classList.toggle("bx-x");
+            menuBars.classList.toggle("bx-menu");
+            // console.log("menuOption is now:", menuOption);
+        }
+    }
+});
+
